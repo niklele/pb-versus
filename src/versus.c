@@ -106,8 +106,12 @@ void select_long_click_handler(ClickRecognizerRef recognizer, Window *window) {
 	(void)window;
 	score_1 = 0;
 	score_2 = 0;
-	text_layer_set_text(&layer_1, "0");
-	text_layer_set_text(&layer_2, "0");
+	scoreText_1[0] = '0';
+	scoreText_1[1] = '\0';
+	scoreText_2[0] = '0';
+	scoreText_2[1] = '\0';
+	text_layer_set_text(&layer_1, scoreText_1);
+	text_layer_set_text(&layer_2, scoreText_2);
 }
 
 void click_config_provider(ClickConfig **config, Window *window) {
